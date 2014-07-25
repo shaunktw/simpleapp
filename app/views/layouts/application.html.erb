@@ -4,7 +4,14 @@
   <title>Simpleapp</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <meta name='trackmetrics_verification' content='040f1adcf74d2f4a6f568730ec3d23f49e447ddf00234ccbf78b50c5d382'/>
   <%= csrf_meta_tags %>
+  <%= javascript_include_tag "//localhost:3000/assets/trackmetrics.js" %>
+<script>
+    Trackmetrics.setAuthToken('c86501e97e4ab72ec893d076d5acfbfa2af0a60ef77aae8d304724261a69');
+    Trackmetrics.send("page_view",{test: true});
+</script>
+
 </head>
 <body>
 
